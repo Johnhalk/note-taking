@@ -17,7 +17,7 @@ function testNoteControllerInstantiates() {
   var controller = new Controller(viewList)
   assert.isTrue(controller._viewList === viewList);
 };
-
+console.log("9. Tests that controller note instantiates with a view list.")
 testNoteControllerInstantiates()
 
 function testNoteControllerUpdateNotes() {
@@ -41,5 +41,5 @@ function testNoteControllerUpdateNotes() {
   controller.updateNotes(element);
   assert.isTrue(element.innerHTML === "<ul><li><div>Favourite Drink: Sprite</div></li></ul>");
 }
-
+console.log("10.The app element contains notes as HTML string.")
 testNoteControllerUpdateNotes()
