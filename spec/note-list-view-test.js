@@ -20,7 +20,7 @@ function testOneNoteInHtmlList() {
   var list = new List();
   list.addNote("Hello my name is Elder Price")
   var viewList = new ViewList(list);
-  assert.isTrue(viewList.displayList() === "<ul><li><div>Hello my name is Eld</div></li></ul>")
+  assert.isTrue(viewList.displayList() === "<ul><a href=#notes/3><li><div>Hello my name is Eld</div></li></a></ul>")
 }
 console.log("7. Has a method that will return one string of HTML that represents the note list model.")
 testOneNoteInHtmlList();
@@ -30,7 +30,7 @@ function testMultipleNoteInHtmlList() {
   list.addNote("Hello my name is Elder Price")
   list.addNote("Howdy my name is Dylan")
   var viewList = new ViewList(list);
-  assert.isTrue(viewList.displayList() === "<ul><li><div>Hello my name is Eld</div></li><li><div>Howdy my name is Dyl</div></li></ul>" )
+  assert.isTrue(viewList.displayList() === "<ul><a href=#notes/4><li><div>Hello my name is Eld</div></li></a><a href=#notes/5><li><div>Howdy my name is Dyl</div></li></a></ul>" )
 }
 console.log("8. Has a method that will return two strings of HTML that represents the note list model.")
 

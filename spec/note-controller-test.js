@@ -29,7 +29,7 @@ function testNoteControllerUpdateNotes() {
 
   ViewListDouble.prototype = {
     displayList: function() {
-      return "<ul><li><div>Favourite Drink: Sprite</div></li></ul>";
+      return "<ul><a href=#notes/7><li><div>Favourite Drink: Sprite</div></li></a></ul>";
     }
   }
 
@@ -39,7 +39,7 @@ function testNoteControllerUpdateNotes() {
   var controller = new Controller(viewListDouble)
   var element = document.getElementById('app');
   controller.updateNotes(element);
-  assert.isTrue(element.innerHTML === "<ul><li><div>Favourite Drink: Sprite</div></li></ul>");
+  assert.isTrue(element.innerHTML === "<ul><a href=\"#notes/7\"><li><div>Favourite Drink: Sprite</div></li></a></ul>");
 }
 console.log("10.The app element contains notes as HTML string.")
 testNoteControllerUpdateNotes()
